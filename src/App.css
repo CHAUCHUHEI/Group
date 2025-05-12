@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+/* Main Sections */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  font-family: Arial, sans-serif;
+  color: #000;
+  font-size: 100%;
+  line-height: 1.2;
+}
+
+#wrapper {
+  max-width: 70em;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: #ffffff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+h1 { font-size: 2.5em; }
+h2 { font-size: 2.25em; }
+h3 { font-size: 1.75em; }
+h4 { font-size: 1.375em; }
+h5 { font-size: 1.125em; }
+h6 { font-size: 1em; }
+
+header {
+  text-align: left;
+  margin-bottom: 4px;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  padding: 0 1rem;
+}
+
+/* Banner and Articles */
+.banner {
+  padding: 20px;
+  color: #000;
+  text-align: center;
+}
+
+.article {
+  padding: 20px;
+  color: #000;
+}
+
+.article ul {
+  text-align: left;
+  color: #000;
+}
+
+/* Header and Navigation */
+.alcatraz-header {
+  background-color: #2c3e50;
+  color: white;
+  padding: 1rem 0;
+}
+
+.alcatraz-header_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.alcatraz-header_logo {
+  display: flex;
+  align-items: center;
+}
+
+.alcatraz-header_logo h1 {
+  font-size: 1.5rem;
+  margin-left: 10px;
+  color: white;
+}
+
+.alcatraz-header_logo a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.alcatraz-header_nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.alcatraz-header_nav-list li {
+  position: relative;
+  margin-left: 1.5rem;
+}
+
+/* Dropdown styling */
+.header-dropdown, .login, .about {
+  background-color: #000;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  list-style: none;
+  padding: 0;
+}
+
+.submenu a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.submenu a:hover {
+  background-color: #f0f0f0;
+}
+
+.menu-1:hover .submenu {
+  display: block;
+}
+
+/* Links */
+a:link, a:active { 
+  color: #0090D2;
+}
+
+a:visited {
+  color: #a368d7;
+}
+
+a:hover {
+  color: #003a61;
+  text-decoration: none;
+}
+
+/* Form styles */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.apply-section {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.cv-section {
+  background-color: #f5f5f5;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #333;
+  display: block;
+  margin-bottom: 5px;
+}
+
+input, select {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100%;
+}
+
+button {
+  background-color: #2c3e50;
+  color: white;
+  padding: 12px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #1a252f;
+}
+
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.error {
+  color: #d9534f;
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+
+.error-message {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.success-message {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 20px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.button {
+  display: inline-block;
+  background-color: #2c3e50;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: 15px;
+}
+
+.button:hover {
+  background-color: #1a252f;
+  color: white;
+}
+
+/* Job listings */
+.jobs-filter-form {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: flex-end;
+}
+
+.form-row > div {
+  flex: 1;
+  min-width: 200px;
+}
+
+.jobs-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.job-card {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 20px;
+  transition: transform 0.2s;
+}
+
+.job-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.job-card h2 {
+  font-size: 1.5rem;
+  margin-top: 0;
+  color: #2c3e50;
+}
+
+.job-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.job-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.view-job-btn, .apply-btn {
+  padding: 8px 15px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.view-job-btn {
+  background-color: #f8f9fa;
+  color: #2c3e50;
+  border: 1px solid #dee2e6;
+}
+
+.apply-btn {
+  background-color: #2c3e50;
+  color: white;
+}
+
+/* CV Upload specific */
+.cv-upload h3 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.cv-upload p {
+  color: #6c757d;
+  margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+  background-color: #2c3e50;
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+footer a {
+  color: white;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .alcatraz-header_content {
+    flex-direction: column;
+  }
+  
+  .alcatraz-header_nav-list {
+    margin-top: 20px;
+  }
+  
+  .alcatraz-header_nav-list li {
+    margin: 10px 0;
+  }
+  
+  .form-row {
+    flex-direction: column;
+  }
+  
+  .jobs-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Make Dropdown work on click for mobile too */
+@media (max-width: 768px) {
+  .menu-1:active .submenu {
+    display: block;
+  }
+} 
