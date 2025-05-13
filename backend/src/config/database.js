@@ -7,6 +7,13 @@ if (process.env.DB_DIALECT === 'postgres' && process.env.DB_URL) {
   // Use PostgreSQL (Render production)
   sequelize = new Sequelize(process.env.DB_URL, {
     dialect: 'postgres',
+    protocol: 'postgres',
+    dialectOptions: {
+      ssl: {
+        require: true,
+        rejectUnauthorized: false // Allows Render's self-signed cert
+      }
+    },
     logging: process.env.NODE_ENV !== 'production' ? console.log : false,
     pool: {
       max: 5,
