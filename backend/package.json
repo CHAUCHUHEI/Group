@@ -8,6 +8,7 @@
     "dev": "nodemon src/index.js",
     "setup-db": "node src/scripts/setupDevDb.js",
     "seed-db": "node src/scripts/seedData.js",
+    "build": "npm install && npm rebuild bcrypt",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
