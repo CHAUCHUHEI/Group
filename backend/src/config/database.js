@@ -1,4 +1,5 @@
 const { Sequelize } = require('sequelize');
+const path = require('path');
 require('dotenv').config();
 
 let sequelize;
@@ -11,7 +12,7 @@ if (process.env.DB_DIALECT === 'postgres' && process.env.DB_URL) {
     dialectOptions: {
       ssl: {
         require: true,
-        rejectUnauthorized: false // Allows Render's self-signed cert
+        rejectUnauthorized: false
       }
     },
     logging: process.env.NODE_ENV !== 'production' ? console.log : false,
@@ -24,15 +25,15 @@ if (process.env.DB_DIALECT === 'postgres' && process.env.DB_URL) {
   });
   console.log('Connected to PostgreSQL (Render)');
 } else {
-  // Use SQLite (local development)
-  const DB_STORAGE = process.env.DB_STORAGE || './database.sqlite';
+  // Use SQLite (Render/local dev fallback)
+  const DB_STORAGE = path.join(__dirname, '../../database.sqlite');
 
   sequelize = new Sequelize({
     dialect: 'sqlite',
     storage: DB_STORAGE,
     logging: process.env.NODE_ENV !== 'production' ? console.log : false
   });
-  console.log('Using SQLite database for development');
+  console.log('Using SQLite database');
 }
 
 // Test connection function
